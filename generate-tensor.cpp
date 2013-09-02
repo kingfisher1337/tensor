@@ -84,13 +84,13 @@ int main(int argc, char** argv) {
           << "    K * m;" << endl
           << "    size_t n[" << i << "];" << endl
           << "    size_t nTotal;" << endl
-          << "    TensorBase" << i << "() : m(0), nTotal(0) {}"
+          << "    TensorBase" << i << "() : m(0), nTotal(0) { }" << endl
+          << "public:" << endl
           << "    TensorBase" << i << "(K * m, ";
         printArgList(o, i);
         o << ") : m(m) {" << endl;
         printInitCopyN(o, i);
         o << "    }" << endl
-          << "public:" << endl
           << "    virtual ~TensorBase" << i << "() { }" << endl
           << "    size_t size() const {" << endl
           << "        return nTotal;" << endl
