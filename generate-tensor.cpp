@@ -60,12 +60,17 @@ void printClean(ostream & o) {
       << "        }" << endl;
 }
 void printArgList(ostream & o, int rank, const string & basename = "n", bool showType = true) {
+    // prints:
+    // int n1, int n2, ..., int n{rank}
+    // n1, n2, ..., n{rank}
     o << (showType ? "int " : "") << basename << "1";
     for (int j = 2; j <= rank; ++j) {
         o << ", " << (showType ? "int " : "") << basename << j;
     }
 }
 void printArgList2(ostream & o, int rank, const string & basename1 = "m", const string & basename2 = "n", bool showType = true) {
+    // prints:
+    // int m1, int n1, int m2, int n2, ..., int m{rank}, int n{rank}
     o << (showType ? "int " : "") << basename1 << "1" << ", "
       << (showType ? "int " : "") << basename2 << "1";
     for (int j = 2; j <= rank; ++j) {
@@ -104,7 +109,7 @@ void printIndexMethodBody(ostream & o, int rank) {
 int main(int argc, char** argv) {
 
     const int maxRank = 11;
-    ofstream o("output/tensor.hpp");
+    ofstream o("tensor.hpp");
     
     o << "#ifndef TENSOR_HPP" << endl
       << "#define TENSOR_HPP" << endl << endl
@@ -217,13 +222,17 @@ int main(int argc, char** argv) {
           << "    ~Tensor" << i <<"() {" << endl;
         printClean(o);
         o << "    }" << endl
-          << "    void resize(int n1";
-        for (int j = 2; j <= i; ++j) {
-            o << ", int n" << j;
-        }
+          << "    void resize(";
+        printArgList(o, i);
         o << ") {" << endl;
         printClean(o);
         printInit(o, i);
+        o << "    }" << endl
+          << "    void resize(";
+        printArgList2(o, i);
+        o << ") {" << endl;
+        printClean(o);
+        printInit2(o, i);
         o << "    }" << endl
           << "};" << endl << endl;
     }
