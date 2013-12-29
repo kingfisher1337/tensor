@@ -148,7 +148,7 @@ int main(int argc, char** argv) {
           << "    int baseIndex(int i) const {" << endl
           << "        return b[i];" << endl
           << "    }" << endl
-          << "    void setBaseIndex(int i, int m) const {" << endl
+          << "    void setBaseIndex(int i, int m) {" << endl
           << "        b[i] = m;" << endl
           << "    }" << endl
           << "    K & operator()(";

@@ -35,7 +35,7 @@ public:
     int baseIndex(int i) const {
         return b[i];
     }
-    void setBaseIndex(int i, int m) const {
+    void setBaseIndex(int i, int m) {
         b[i] = m;
     }
     K & operator()(int i1) {
@@ -89,7 +89,7 @@ public:
     int baseIndex(int i) const {
         return b[i];
     }
-    void setBaseIndex(int i, int m) const {
+    void setBaseIndex(int i, int m) {
         b[i] = m;
     }
     K & operator()(int i1, int i2) {
@@ -153,7 +153,7 @@ public:
     int baseIndex(int i) const {
         return b[i];
     }
-    void setBaseIndex(int i, int m) const {
+    void setBaseIndex(int i, int m) {
         b[i] = m;
     }
     K & operator()(int i1, int i2, int i3) {
@@ -228,7 +228,7 @@ public:
     int baseIndex(int i) const {
         return b[i];
     }
-    void setBaseIndex(int i, int m) const {
+    void setBaseIndex(int i, int m) {
         b[i] = m;
     }
     K & operator()(int i1, int i2, int i3, int i4) {
@@ -315,7 +315,7 @@ public:
     int baseIndex(int i) const {
         return b[i];
     }
-    void setBaseIndex(int i, int m) const {
+    void setBaseIndex(int i, int m) {
         b[i] = m;
     }
     K & operator()(int i1, int i2, int i3, int i4, int i5) {
@@ -415,7 +415,7 @@ public:
     int baseIndex(int i) const {
         return b[i];
     }
-    void setBaseIndex(int i, int m) const {
+    void setBaseIndex(int i, int m) {
         b[i] = m;
     }
     K & operator()(int i1, int i2, int i3, int i4, int i5, int i6) {
@@ -529,7 +529,7 @@ public:
     int baseIndex(int i) const {
         return b[i];
     }
-    void setBaseIndex(int i, int m) const {
+    void setBaseIndex(int i, int m) {
         b[i] = m;
     }
     K & operator()(int i1, int i2, int i3, int i4, int i5, int i6, int i7) {
@@ -658,7 +658,7 @@ public:
     int baseIndex(int i) const {
         return b[i];
     }
-    void setBaseIndex(int i, int m) const {
+    void setBaseIndex(int i, int m) {
         b[i] = m;
     }
     K & operator()(int i1, int i2, int i3, int i4, int i5, int i6, int i7, int i8) {
@@ -803,7 +803,7 @@ public:
     int baseIndex(int i) const {
         return b[i];
     }
-    void setBaseIndex(int i, int m) const {
+    void setBaseIndex(int i, int m) {
         b[i] = m;
     }
     K & operator()(int i1, int i2, int i3, int i4, int i5, int i6, int i7, int i8, int i9) {
@@ -965,7 +965,7 @@ public:
     int baseIndex(int i) const {
         return b[i];
     }
-    void setBaseIndex(int i, int m) const {
+    void setBaseIndex(int i, int m) {
         b[i] = m;
     }
     K & operator()(int i1, int i2, int i3, int i4, int i5, int i6, int i7, int i8, int i9, int i10) {
@@ -1145,7 +1145,7 @@ public:
     int baseIndex(int i) const {
         return b[i];
     }
-    void setBaseIndex(int i, int m) const {
+    void setBaseIndex(int i, int m) {
         b[i] = m;
     }
     K & operator()(int i1, int i2, int i3, int i4, int i5, int i6, int i7, int i8, int i9, int i10, int i11) {
