@@ -57,9 +57,9 @@ for (int i = 0; i < 10; ++i) {
 ------------------
 Tensor2<double> a(-10, +10, -5, +5); // a(x, y) with -10 <= x <= +10 and -5 <= y +5
 int x0 = f.baseIndex(0);
-int x1 = x0 + f.size(0);
+int x1 = x0 + f.size(0) - 1;
 int y0 = f.baseIndex(1);
-int y1 = y0 + f.size(1);
+int y1 = y0 + f.size(1) - 1;
 for (int x = x0; x <= x1; ++x) {
     for (int y = y0; y <= y1; ++y) {
         a(x, y) = x + y;
