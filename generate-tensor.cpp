@@ -148,6 +148,9 @@ int main(int argc, char** argv) {
           << "    int baseIndex(int i) const {" << endl
           << "        return b[i];" << endl
           << "    }" << endl
+          << "    void setBaseIndex(int i, int m) const {" << endl
+          << "        b[i] = m;" << endl
+          << "    }" << endl
           << "    K & operator()(";
         printArgList(o, i, "i");
         o << ") {" << endl;
@@ -169,7 +172,7 @@ int main(int argc, char** argv) {
             }
             o << ");" << endl
               << "    }" << endl;
-        }
+        }        
         o << "    K * getMemory() {" << endl
           << "        return m;" << endl
           << "    }" << endl
