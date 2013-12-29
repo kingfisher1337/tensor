@@ -49,6 +49,9 @@ public:
     K * getMemory() {
         return m;
     }
+    const K * getMemory() const {
+        return m;
+    }
 };
 
 template <typename K> class TensorBase2 {
@@ -104,6 +107,9 @@ public:
         return TensorBase1<K>(&m[k], b[1], b[1]+n[1]-1);
     }
     K * getMemory() {
+        return m;
+    }
+    const K * getMemory() const {
         return m;
     }
 };
@@ -172,6 +178,9 @@ public:
         return TensorBase1<K>(&m[k], b[2], b[2]+n[2]-1);
     }
     K * getMemory() {
+        return m;
+    }
+    const K * getMemory() const {
         return m;
     }
 };
@@ -252,6 +261,9 @@ public:
         return TensorBase1<K>(&m[k], b[3], b[3]+n[3]-1);
     }
     K * getMemory() {
+        return m;
+    }
+    const K * getMemory() const {
         return m;
     }
 };
@@ -345,6 +357,9 @@ public:
         return TensorBase1<K>(&m[k], b[4], b[4]+n[4]-1);
     }
     K * getMemory() {
+        return m;
+    }
+    const K * getMemory() const {
         return m;
     }
 };
@@ -452,6 +467,9 @@ public:
         return TensorBase1<K>(&m[k], b[5], b[5]+n[5]-1);
     }
     K * getMemory() {
+        return m;
+    }
+    const K * getMemory() const {
         return m;
     }
 };
@@ -574,6 +592,9 @@ public:
         return TensorBase1<K>(&m[k], b[6], b[6]+n[6]-1);
     }
     K * getMemory() {
+        return m;
+    }
+    const K * getMemory() const {
         return m;
     }
 };
@@ -712,6 +733,9 @@ public:
         return TensorBase1<K>(&m[k], b[7], b[7]+n[7]-1);
     }
     K * getMemory() {
+        return m;
+    }
+    const K * getMemory() const {
         return m;
     }
 };
@@ -867,6 +891,9 @@ public:
         return TensorBase1<K>(&m[k], b[8], b[8]+n[8]-1);
     }
     K * getMemory() {
+        return m;
+    }
+    const K * getMemory() const {
         return m;
     }
 };
@@ -1040,6 +1067,9 @@ public:
         return TensorBase1<K>(&m[k], b[9], b[9]+n[9]-1);
     }
     K * getMemory() {
+        return m;
+    }
+    const K * getMemory() const {
         return m;
     }
 };
@@ -1232,6 +1262,9 @@ public:
         return TensorBase1<K>(&m[k], b[10], b[10]+n[10]-1);
     }
     K * getMemory() {
+        return m;
+    }
+    const K * getMemory() const {
         return m;
     }
 };

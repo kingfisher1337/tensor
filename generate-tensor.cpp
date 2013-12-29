@@ -176,6 +176,9 @@ int main(int argc, char** argv) {
         o << "    K * getMemory() {" << endl
           << "        return m;" << endl
           << "    }" << endl
+          << "    const K * getMemory() const {" << endl
+          << "        return m;" << endl
+          << "    }" << endl
           << "};" << endl << endl;
     }
     
